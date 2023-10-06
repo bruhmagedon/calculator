@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: 2e6ba6aa9bef4117d8e17d4fb0d9e47a13efc571039131820d2bf466f0a280c4
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - fullstack
+
+networks:
+  fullstack:
+    driver: bridge
